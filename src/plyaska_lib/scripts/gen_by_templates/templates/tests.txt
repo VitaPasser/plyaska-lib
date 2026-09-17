@@ -1,0 +1,69 @@
+import pytest
+import pytest_asyncio
+from httpx import AsyncClient
+
+from src.models.{name} import {class_name}
+from src.utils.test_utils.response_models import ResponseDo, ResponseModel
+
+
+@pytest_asyncio.fixture
+async def create_{name}(client: AsyncClient) -> ResponseDo:
+    async def _create_{name}() -> ResponseModel:
+        response = await client.post(
+            url="/{name}s/",
+            content="""
+                    {{}}
+                    """,
+        )
+        assert response.status_code == 201, output_response(response)
+        model = {class_name}(**response.json())
+        return ResponseModel(response=response, model=model)
+
+    {name} = await _create_{name}()
+    return ResponseDo(response={name}.response, model={name}.model, do=_create_{name})
+
+
+@pytest.mark.asyncio
+async def test_create(client: AsyncClient, create_{name}: ResponseDo):
+    response = create_{name}.response
+    assert response.status_code == 201, response.json()
+
+
+@pytest.mark.asyncio
+async def test_find_all(client: AsyncClient, create_{name}: ResponseDo):
+    models_test = [(await create_{name}.do()).model, (await create_{name}.do()).model]
+    response = await client.get(url="/{name}s/")
+
+    assert response.status_code == 200, response.json()
+
+    models = [{class_name}.model_validate({name}) for {name} in response.json()]
+
+    assert {{m.id for m in models}} >= {{m.id for m in models_test}}, response.json()
+
+
+@pytest.mark.asyncio
+async def test_find_by_id(client: AsyncClient, create_{name}: ResponseDo):
+    _id = create_{name}.response.json()["_id"]
+    response = await client.get(url=f"/{name}s/{{_id}}")
+    assert response.status_code == 200, response.json()
+
+
+@pytest.mark.asyncio
+async def test_update(client: AsyncClient, create_{name}: ResponseDo):
+    _id = (await create_{name}.do()).model.id
+    response = await client.patch(
+        url=f"/{name}s/{{_id}}",
+        content="""
+                {{}}
+                """,
+    )
+    assert response.status_code == 200, response.json()
+    model = {class_name}.model_validate(response.json())
+    assert model.updated_at is not None and model.created_at is not None, response.json()
+
+
+@pytest.mark.asyncio
+async def test_delete(client: AsyncClient, create_{name}: ResponseDo):
+    _id = (await create_{name}.do()).model.id
+    response = await client.delete(url=f"/{name}s/{{_id}}")
+    assert response.status_code == 200, response.json()
