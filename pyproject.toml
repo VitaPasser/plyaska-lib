@@ -1,6 +1,6 @@
 [project]
 name = "plyaska-lib"
-version = "0.1.0"
+version = "0.1.1"
 description = "Plyaska-lib is a backend library for fast development."
 readme = "README.md"
 authors = [
