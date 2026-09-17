@@ -8,8 +8,8 @@ from beanie import PydanticObjectId
 from fastapi import APIRouter
 from fastapi.routing import APIRoute
 
-from src.exceptions.errors.http import NotFoundedHTTPException
-from src.exceptions.errors.repository import NotFoundedError
+from src.plyaska_lib.temp.exceptions.errors.http import NotFoundedHTTPException
+from src.plyaska_lib.temp.exceptions.errors.repository import NotFoundedError
 from src.plyaska_lib.db.cache import redis_cache
 from src.plyaska_lib.models.create_update_dto_maker import (
     make_create_schema,

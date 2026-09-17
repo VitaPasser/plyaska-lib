@@ -2,10 +2,10 @@ import logging
 import os
 from datetime import date
 
-from src.plyaska_lib.config import settings
+from plyaska_lib.logging.settings_logging_protocol import SettingsLoggable
 
 
-def logging_setup():
+def logging_setup(settings: SettingsLoggable):
     env = settings
 
     log_dir = env.logging_dir_path

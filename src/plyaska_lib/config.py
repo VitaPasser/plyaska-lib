@@ -3,10 +3,12 @@ from typing import ClassVar
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+from plyaska_lib.logging.settings_logging_protocol import SettingsLoggable
+
 basepath = Path(__file__).parent.parent.parent
 
 
-class Settings(BaseSettings):
+class Settings(BaseSettings, SettingsLoggable):
     mongo_username: str
     mongo_password: str
     mongo_host: str
