@@ -8,16 +8,16 @@ from beanie import PydanticObjectId
 from fastapi import APIRouter
 from fastapi.routing import APIRoute
 
-from src.plyaska_lib.temp.exceptions.errors.http import NotFoundedHTTPException
-from src.plyaska_lib.temp.exceptions.errors.repository import NotFoundedError
-from src.plyaska_lib.db.cache import redis_cache
-from src.plyaska_lib.models.create_update_dto_maker import (
+from plyaska_lib.temp.exceptions.errors.http import NotFoundedHTTPException
+from plyaska_lib.temp.exceptions.errors.repository import NotFoundedError
+from plyaska_lib.db.cache import redis_cache
+from plyaska_lib.models.create_update_dto_maker import (
     make_create_schema,
     make_update_schema,
 )
-from src.plyaska_lib.models.data_to_objects import CreateSchemaT, ModelT, UpdateSchemaT
-from src.plyaska_lib.repositories.auto_crud_repository import AutoCRUDRepository
-from src.plyaska_lib.repositories.beanie_auto_crud_repository import BeanieAutoCRUDRepository
+from plyaska_lib.models.data_to_objects import CreateSchemaT, ModelT, UpdateSchemaT
+from plyaska_lib.repositories.auto_crud_repository import AutoCRUDRepository
+from plyaska_lib.repositories.beanie_auto_crud_repository import BeanieAutoCRUDRepository
 
 
 class CRUDRouter:

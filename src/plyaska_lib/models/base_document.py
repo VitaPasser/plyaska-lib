@@ -2,7 +2,7 @@ from typing import Type, TypeVar
 
 from beanie import Delete, Document, Insert, Replace, Update, after_event
 
-from src.plyaska_lib.string import camel_to_db_name
+from plyaska_lib.string import camel_to_db_name
 
 T = TypeVar("T", bound=Type[Document])
 

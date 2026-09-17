@@ -2,7 +2,7 @@ import sys
 from abc import ABC, abstractmethod
 from typing import Type
 
-from src.plyaska_lib.models.data_to_objects import CreateSchemaT, ModelT, UpdateSchemaT
+from plyaska_lib.models.data_to_objects import CreateSchemaT, ModelT, UpdateSchemaT
 
 
 class AutoCRUDRepository(ABC):

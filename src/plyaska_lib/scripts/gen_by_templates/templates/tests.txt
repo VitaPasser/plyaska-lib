@@ -3,7 +3,7 @@ import pytest_asyncio
 from httpx import AsyncClient
 
 from src.models.{name} import {class_name}
-from src.plyaska_lib.test_utils.response_models import ResponseDo, ResponseModel
+from plyaska_lib.test_utils.response_models import ResponseDo, ResponseModel
 
 
 @pytest_asyncio.fixture

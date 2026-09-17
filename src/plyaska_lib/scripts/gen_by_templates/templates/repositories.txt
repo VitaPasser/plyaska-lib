@@ -5,8 +5,8 @@ from typing import TYPE_CHECKING
 from beanie import PydanticObjectId
 
 from src.models.{name} import {class_name}
-from src.plyaska_lib.models.data_to_objects import CreateSchemaT, UpdateSchemaT
-from src.plyaska_lib.repositories.beanie_auto_crud_repository import BeanieAutoCRUDRepository
+from plyaska_lib.models.data_to_objects import CreateSchemaT, UpdateSchemaT
+from plyaska_lib.repositories.beanie_auto_crud_repository import BeanieAutoCRUDRepository
 
 __repository = BeanieAutoCRUDRepository({class_name})
 

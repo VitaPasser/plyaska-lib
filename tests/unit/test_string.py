@@ -1,4 +1,4 @@
-from src.plyaska_lib import string
+from plyaska_lib import string
 
 def test_pluralize_snake():
     assert string.pluralize_snake('test') == 'tests'

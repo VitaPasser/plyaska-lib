@@ -3,9 +3,9 @@ from typing import Type
 
 from beanie import PydanticObjectId
 
-from src.plyaska_lib.temp.exceptions.errors.repository import NotFoundedError
-from src.plyaska_lib.models.data_to_objects import CreateSchemaT, ModelT, UpdateSchemaT
-from src.plyaska_lib.repositories.auto_crud_repository import AutoCRUDRepository
+from plyaska_lib.temp.exceptions.errors.repository import NotFoundedError
+from plyaska_lib.models.data_to_objects import CreateSchemaT, ModelT, UpdateSchemaT
+from plyaska_lib.repositories.auto_crud_repository import AutoCRUDRepository
 
 
 class BeanieAutoCRUDRepository(AutoCRUDRepository):

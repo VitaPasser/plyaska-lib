@@ -4,8 +4,8 @@ import threading
 from beanie import init_beanie
 from pymongo import AsyncMongoClient
 
-from src.plyaska_lib.db.db_provider import DBProvider
-from src.plyaska_lib.models.models_loader import load_beanie_models
+from plyaska_lib.db.db_provider import DBProvider
+from plyaska_lib.models.models_loader import load_beanie_models
 
 
 def _load_documents():

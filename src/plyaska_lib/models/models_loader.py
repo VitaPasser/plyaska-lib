@@ -4,7 +4,7 @@ import pkgutil
 
 from beanie import Document
 
-from src.plyaska_lib.models.base_document import BaseDocument
+from plyaska_lib.models.base_document import BaseDocument
 
 
 def load_beanie_models(package_name: str):

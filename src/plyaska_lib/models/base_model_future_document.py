@@ -4,7 +4,7 @@ from typing import Optional
 from beanie import PydanticObjectId
 from pydantic import Field, model_validator
 
-from src.plyaska_lib.models.base_model import BaseModel
+from plyaska_lib.models.base_model import BaseModel
 
 
 class DateArchive(BaseModel):

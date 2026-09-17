@@ -3,7 +3,7 @@ import threading
 
 from redis.asyncio import Redis
 
-from src.plyaska_lib.db.db_provider import DBProvider
+from plyaska_lib.db.db_provider import DBProvider
 
 
 class RedisDBProvider(DBProvider):

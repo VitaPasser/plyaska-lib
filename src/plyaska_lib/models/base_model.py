@@ -3,7 +3,7 @@ from typing import Any, Dict
 from bson import Decimal128
 from pydantic import BaseModel as PydanticBaseModel
 
-from src.plyaska_lib.string import camel_to_db_name
+from plyaska_lib.string import camel_to_db_name
 
 
 class BaseModel(PydanticBaseModel):

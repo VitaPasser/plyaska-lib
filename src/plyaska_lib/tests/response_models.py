@@ -3,7 +3,7 @@ from typing import Any, Callable, Coroutine, Generic
 
 from httpx import Response
 
-from src.plyaska_lib.controllers.crud_router import ModelT
+from plyaska_lib.controllers.crud_router import ModelT
 
 
 @dataclass

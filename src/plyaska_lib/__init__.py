@@ -1,13 +1,13 @@
-# from src.plyaska_lib import config
-from src.plyaska_lib import controllers
-from src.plyaska_lib import db
-from src.plyaska_lib import handlers
-from src.plyaska_lib import logging
-from src.plyaska_lib import models
-from src.plyaska_lib import repositories
-from src.plyaska_lib import scripts
-from src.plyaska_lib import string
-from src.plyaska_lib import tests
+# from plyaska_lib import config
+from plyaska_lib import controllers
+from plyaska_lib import db
+from plyaska_lib import handlers
+from plyaska_lib import logging
+from plyaska_lib import models
+from plyaska_lib import repositories
+from plyaska_lib import scripts
+from plyaska_lib import string
+from plyaska_lib import tests
 
 __all__ = [
     # 'config',
